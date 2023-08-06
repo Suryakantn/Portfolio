@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
-
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import totalexperinces from './experience.json';
 function App() {
+  const [mode, setMode] = useState('light');
+  const toggleMode = () => {
+    if (mode === 'light') {
+      setMode('dark');
+    } else {
+      setMode('light');
+    }
+  }
+  const [experiences, setExperiences] = useState(totalexperinces)
+  useEffect(() => {
+    setExperiences(totalexperinces);
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ backgroundColor: mode === 'light' ? 'white' : 'black' }} >
+      <Navbar mode={mode} toggleMode={toggleMode}></Navbar>
+      <Home mode={mode} experiences={experiences}></Home>
+      <Footer mode={mode} ></Footer>
     </div>
   );
 }

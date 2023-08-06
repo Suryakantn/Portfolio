@@ -1,0 +1,48 @@
+[
+    {
+        "order": "1",
+        "title": "Software Engineer - II",
+        "company": "Finicity, a Mastercard Company",
+        "location": "Navi Mumbai, Maharshtra",
+        "expStart": "06/2021",
+        "expEnd": "present",
+        "description": [
+            "Develop scripts to synchronize and scrape user data & transactions from Financial Institutions",
+            "Supporting company’s owned budgeting application.",
+            "Develop, test and implement new software programs"
+        ],
+        "company_url":"https://www.linkedin.com/company/finicity/mycompany/",
+        "isActive": true
+    },
+    {
+        "order": "2",
+        "title": "Software Engineer",
+        "company": "Vernost Marketing Technology Solutions Ltd.",
+        "location": "Mumbai, Maharshtra",
+        "expStart": "06/2018",
+        "expEnd": "05/2021",
+        "description": [
+            "Helped to Launch Intermiles/Jet Privilege loyalty platform.Integration with Razorpay,Citrus Pay,Cleartrip and EaseMyTrip.",
+            "Implemented web service and utilized it in to UI, UX, Back Office and Schedulers",
+            "Collaborated on all stages of systems development lifecycle, from requirement gathering to production releases.",
+            "Contributed ideas and suggestions in team meetings and delivered updates on deadlines, designs and enhancements.",
+            "Coordinated with project management staff on database development timelines and project scope."
+        ],
+        "company_url":"https://www.linkedin.com/company/vernostmarketingtechnologysolutions/",
+        "isActive": true
+    },
+    {
+        "order": "3",
+        "title": "Trainee Software Engineer",
+        "company": "Naaptol Online Shopping Pvt. Ltd",
+        "location": "Navi Mumbai, Maharshtra",
+        "expStart": "02/2018",
+        "expEnd": "05/2018",
+        "description": [
+            "Learned from Designing to Developing projects with Frontend and Backend technologies.",
+            "Implemented small modules to enhance platform"
+        ],
+        "company_url":"https://www.linkedin.com/company/naaptol-online-shopping-pvt--ltd/",
+        "isActive": true
+    }
+]
