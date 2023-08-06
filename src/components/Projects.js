@@ -1,16 +1,13 @@
 import React from 'react'
 
-const Projects = () => {
+const Projects = (props) => {
+    let textColor = props.mode === 'light' ? 'black' : 'white';
     return (
         <>
-            <h1 className="textAnim">
-                {/* <span>always be</span>
-                <div className="message">
-                    <div className="word1">close</div>
-                    <div className="word2">code</div>
-                    <div className="word3">creating</div>
-                </div> */}
-            </h1>
+            <div>
+                <h1 className={`header-name my-4 text-${textColor}`}>My Projects</h1>
+                <h4 className={`my-4 header-anim text-${textColor}`}>Projects will be added soon!!!</h4>
+            </div>
         </>
     )
 }
