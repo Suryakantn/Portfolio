@@ -8,7 +8,7 @@ function Navbar(props) {
         <>
             <nav className={`navbar fixed-top navbar-expand-lg bg-${props.mode}`}>
                 <div className="container-fluid">
-                    <img className="inner-img mx-2" width="30" height="30" src="myavatar.png" alt="Personal Portfolio Images" />
+                    <img className="inner-img mx-2" width="30" height="30" src={require(`../assets/images/myavatar.png`)} alt="Personal Portfolio Images" />
                     <Link className={`navbar-brand text-${textColor} nav-text-link`} to="about" spy={true} smooth={true} offset={-60} >Suryakant</Link>
                     <button className={`navbar-toggler bg-${socialBtn} `} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
