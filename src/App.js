@@ -18,7 +18,7 @@ function App() {
     setExperiences(totalexperinces);
   }, [])
   return (
-    <div className="App" style={{ backgroundColor: mode === 'light' ? 'white' : 'black' }} >
+    <div className="App mydivclass" style={{ backgroundColor: mode === 'light' ? 'white' : 'black' }} >
       <Navbar mode={mode} toggleMode={toggleMode}></Navbar>
       <Home mode={mode} experiences={experiences}></Home>
       <Footer mode={mode} ></Footer>
