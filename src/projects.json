@@ -1,0 +1,17 @@
+[
+    {
+        "name": "TextUtils",
+        "description": "A TextUtils app is a digital tool designed to count the number of words in a given text or document. These apps are commonly used by writers, students, professionals, and anyone who needs to keep track of the word count for various purposes, such as writing assignments, articles, blog posts, essays, or social media posts. Word counter apps provide a quick and convenient way to determine the length of a piece of text without manually counting each individual word.",
+        "url": "https://suryakantn.github.io/Textutils/"
+    },
+    {
+        "name": "iNoteBook",
+        "description": "A cloud notebook app is a type of digital application designed to help users take, organize, and store notes in an electronic format. These apps utilize cloud computing technology, allowing users to access their notes and notebooks from various devices and locations, as the notes are stored on remote servers (the cloud) rather than just on a single device. This provides convenience and flexibility, as users can access and sync their notes across smartphones, tablets, laptops, and desktop computers.",
+        "url": ""
+    },
+    {
+        "name": "News Kida",
+        "description": "A news app is a software application designed to provide users with up-to-date and relevant information about current events, news stories, and various topics of interest. These apps offer a convenient and customizable way for users to stay informed about the latest developments, trends, and breaking news from around the world. News apps can be installed on smartphones, tablets, and other devices, making it easy for users to access news content anytime and anywhere.",
+        "url": ""
+    }
+]

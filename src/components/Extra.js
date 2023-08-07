@@ -44,7 +44,7 @@ const Extra = (props) => {
                                 Cricket</button>
                             <button type="button" className={`btn btn-${btnCol} my-3 lang-names`}>
                                 <i className="fa-sharp fa-solid fa-circle-dot mx-3"></i>
-                                Wcthing Sci-fi Movie/Series</button>
+                                Watching Sci-fi Movies/Series</button>
                         </div>
                     </div>
                 </div>

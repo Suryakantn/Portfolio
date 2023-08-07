@@ -25,6 +25,12 @@ function Navbar(props) {
                                 <Link className={`nav-link text-${textColor} `} to="experience" spy={true} smooth={true} offset={-60} duration={500}>Experience</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className={`nav-link text-${textColor} `} to="skills" spy={true} smooth={true} offset={-60} duration={500}>skills</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className={`nav-link text-${textColor} `} to="project" spy={true} smooth={true} offset={-60} duration={500}>Projects</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className={`nav-link text-${textColor} `} to="extra" spy={true} smooth={true} offset={-60} duration={500}>Extra</Link>
                             </li>
                             
