@@ -6,23 +6,22 @@ const Projects = (props) => {
         <>
             <div>
                 <h1 className={`header-name my-4 text-${textColor}`}>My Projects</h1>
-                <div className="row row-cols-3 row-cols-lg-3 g-3 g-lg-3 my-4">
+                <div className="row">
                     {projectsData.map((pro, i) => {
                         return (
-                            <div key={i} className={`card col mx-3 bg-${props.mode} text-${textColor} mx-3 my-3`}>
-                                <div className="card-body">
-                                    <h2 className="card-title">{pro.name}</h2>
-                                    {/* <h6 className="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> */}
-                                    <p className="card-text">{pro.description}</p>
-                                    {pro.url && <a href={pro.url} target="_blank" rel="noopener noreferrer" className="card-link">Preview</a>}
-                                    {/* <a href="/" className="card-link">Another link</a> */}
+                            <div key={i} className="col-sm-6 my-3">
+                                <div className={`card bg-${props.mode} text-${textColor}`}>
+                                    <div className="card-body">
+                                        <h2 className="card-title">{pro.name}</h2>
+                                        <p className="card-text">{pro.description}</p>
+                                        {pro.url && <a href={pro.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Preview</a>}
+                                    </div>
                                 </div>
                             </div>
                         )
                     })}
-
-
                 </div>
+
                 <h4 className={`my-4 header-anim text-${textColor}`}>More Projects will be added soon!!!</h4>
             </div>
         </>
