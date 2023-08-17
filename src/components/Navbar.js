@@ -4,6 +4,22 @@ import { Link } from 'react-scroll'
 function Navbar(props) {
     let textColor = props.mode === 'light' ? 'black' : 'white';
     let socialBtn = props.mode === 'light' ? 'secondary' : 'light';
+    // Function will execute on click of button
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        let pdfUrl = require(`../assets/Suryakant_Nirmal_Resume.pdf`);
+        fetch(pdfUrl).then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Suryakant_Nirmal_Resume.pdf';
+                alink.click();
+            })
+        })
+    }
     return (
         <>
             <nav className={`navbar fixed-top navbar-expand-lg bg-${props.mode}`}>
@@ -33,7 +49,10 @@ function Navbar(props) {
                             <li className="nav-item">
                                 <Link className={`nav-link text-${textColor} `} to="extra" spy={true} smooth={true} offset={-60} duration={500}>Extra</Link>
                             </li>
-                            
+                            <li className="nav-item">
+                                <button className={`nav-link text-${textColor} `}  onClick={onButtonClick}>Resume <i className="fa-solid fa-download"></i></button>
+                            </li>
+
                         </ul>
                         <div className="form-check form-switch">
                             <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onClick={props.toggleMode} />

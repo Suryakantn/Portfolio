@@ -5,7 +5,7 @@ function About(props) {
         <>
             <div className={`bg-${props.mode} my-5 homeadjust text-${textColor}`} >
                 <div className="row row--30 align-items-center">
-                    <div className="order-2 order-lg-1 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30">
+                    <div className="container order-2 order-lg-1 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30">
                         <div className="content">
                             <div className="inner">
                                 <h2 className="subtitle">Welcome to my world</h2>
@@ -28,19 +28,19 @@ function About(props) {
                                     </div>
                                 </h1>
                                 <div className="container">
-                                    <p className="description">I am a passionate Full Stack Developer with a diverse skillset, specializing in Node.js, Angular, React, AWS, JavaScript, MySQL, MongoDB, and other cutting-edge technologies. With 5+ years of experience in the software development industry, I take pride in building robust and scalable applications that provide seamless user experiences. Along with that I'm a problem solver, an independent introvert, self learner, obsessed with the technology.</p>
+                                    <p className="description text-start">I am a passionate Full Stack Developer with a diverse skillset, specializing in Node.js, Angular, React, AWS, JavaScript, MySQL, MongoDB, and other cutting-edge technologies. With 5+ years of experience in the software development industry, I take pride in building robust and scalable applications that provide seamless user experiences. Along with that I'm a problem solver, an independent introvert, self learner, obsessed with the technology.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="order-1 order-lg-2 col-lg-5">
+                    {/* <div className="order-1 order-lg-2 col-lg-5">
                         <div className="thumbnail">
                             <div className="inner">
                                 <img className="inner-img" src={require(`../assets/images/${props.mode !== 'light' ? 'pofile_photo.jpg' : 'pofile_photo2.jpg'}`)} alt="Personal Portfolio Images" />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>
