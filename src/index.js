@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import NoFound from './NoFound';
+// import NoFound from './NoFound';
 import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const CryptoJS = require('crypto-js');
+// const CryptoJS = require('crypto-js');
 getAlert();
 
 function getAlert() {
