@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import totalexperinces from './experience.json';
 function App() {
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState('dark');
   const toggleMode = () => {
     if (mode === 'light') {
       setMode('dark');
