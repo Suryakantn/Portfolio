@@ -7,9 +7,9 @@ const Projects = (props) => {
             <div>
                 <h1 className={`header-name my-4 text-${textColor}`}>My Projects</h1>
                 <div className="row">
-                    {projectsData.map((pro, i) => {
+                    {projectsData.map((pro) => {
                         return (
-                            <div key={i} className="col-sm-6 my-3">
+                            <div key={pro.name} className="col-sm-6 my-3">
                                 <div className={`card bg-${props.mode} text-${textColor}`}>
                                     <div className="card-body">
                                         <h2 className="card-title">{pro.name}</h2>

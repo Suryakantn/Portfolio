@@ -32,7 +32,7 @@ function Footer(props) {
                 </div>
 
                 <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                    © 2023 Copyright:nirmalsuryakant@gmail.com
+                    © {new Date().getFullYear()} Copyright: nirmalsuryakant@gmail.com
                 </div>
             </div>
         </>

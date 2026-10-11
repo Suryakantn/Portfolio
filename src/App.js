@@ -7,12 +7,8 @@ import totalexperinces from './experience.json';
 function App() {
   const [mode, setMode] = useState('dark');
   const toggleMode = () => {
-    if (mode === 'light') {
-      setMode('dark');
-    } else {
-      setMode('light');
-    }
-  }
+    setMode((currentMode) => (currentMode === 'light' ? 'dark' : 'light'));
+  };
   const [experiences, setExperiences] = useState(totalexperinces)
   useEffect(() => {
     setExperiences(totalexperinces);

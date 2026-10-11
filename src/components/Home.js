@@ -20,9 +20,9 @@ function Home(props) {
             <hr className="dashed-line container"/>     
             <div className="container" id="experience" >
                 <h2 className={`header-name text-${props.mode === 'light' ? 'black' : 'white'}`}>My Experiences</h2>
-                {props.experiences.map((exp) => {
+                {props.experiences.map((company) => {
                     return (
-                        <Profession key={exp.order} mode={props.mode} exp={exp}></Profession>
+                        <Profession key={company.companyId} mode={props.mode} exp={company}></Profession>
                     )
                 })}
             </div>

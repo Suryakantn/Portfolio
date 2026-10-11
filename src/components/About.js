@@ -9,26 +9,17 @@ function About(props) {
                         <div className="content">
                             <div className="inner">
                                 <h2 className="subtitle">Welcome to my world</h2>
-                                <h1 className="title">Hi, I’m <span>Suryakant Nirmal</span><br />
-                                    <span className="header-caption" id="page-top">
-                                        <span className="cd-headline clip is-full-width">
-                                            {/* <span>a </span> */}
-                                            <span className="cd-words-wrapper" style={{ width: "279.749px", overflow: "hidden" }}>
-                                                <p className="is-visible">a</p>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </h1>
+                                <h1 className="title" id="page-top">Hi, I’m <span>Suryakant Nirmal</span></h1>
                                 <h1 className="textAnim">
                                     <span></span>
                                     <div className="message">
-                                        <div className="word1">Front End Developer.</div>
-                                        <div className="word2">Back End Developer.</div>
-                                        <div className="word3">Full Stack Developer.</div>
+                                        <div className="word1">Senior Software Engineer.</div>
+                                        <div className="word2">Full-Stack Engineer.</div>
+                                        <div className="word3">Building Scalable FinTech Platforms.</div>
                                     </div>
                                 </h1>
                                 <div className="container">
-                                    <p className="description text-start">I am a passionate Full Stack Developer with a diverse skillset, specializing in Node.js, Angular, React, AWS, JavaScript, MySQL, MongoDB, and other cutting-edge technologies. With 5+ years of experience in the software development industry, I take pride in building robust and scalable applications that provide seamless user experiences. Along with that I'm a problem solver, an independent introvert, self learner, obsessed with the technology.</p>
+                                    <p className="description text-start">I’m a Senior Software Engineer at Finicity, a Mastercard Company, with 7+ years of experience designing, developing, testing, and deploying web and mobile applications. I build robust, scalable applications and integrate APIs and services to deliver seamless user experiences across business domains. My toolkit includes JavaScript, TypeScript, Node.js, React, Angular, Java, AWS, MySQL, MongoDB, and Redis. I’m a problem solver and self-learner who enjoys creating meaningful products and keeping up with new technologies.</p>
                                 </div>
                             </div>
                         </div>
