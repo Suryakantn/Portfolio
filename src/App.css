@@ -93,7 +93,7 @@
 .textAnim {
   color: #333;
   font-family: tahoma;
-  font-size: 3rem;
+  font-size: clamp(0.875rem, 3.5vw, 1.5rem);
   /* font-weight: 100; */
   line-height: 1.5;
   text-transform: uppercase;
@@ -115,7 +115,7 @@
   position: absolute;
   padding-left: 0.5rem;
   top: 0.2rem;
-  left: 2em;
+  left: 0.5rem;
   animation: openclose 15s ease-in-out infinite;
 }
 
@@ -155,46 +155,46 @@
   }
 
   38% {
-    top: -4.5rem;
+    top: -1.5em;
 
   }
 
   48% {
-    top: -4.5rem;
+    top: -1.5em;
     width: 100%;
   }
 
   62% {
-    top: -4.5rem;
+    top: -1.5em;
     width: 100%;
   }
 
   66% {
-    top: -4.5rem;
+    top: -1.5em;
     width: 0;
     text-indent: 0;
   }
 
   71% {
-    top: -9rem;
+    top: -3em;
     width: 0;
     text-indent: 5px;
   }
 
   86% {
-    top: -9rem;
+    top: -3em;
     width: 100%;
   }
 
   95% {
-    top: -9rem;
+    top: -3em;
     width: 100%;
   }
 
   98% {
-    top: -9rem;
+    top: -3em;
     width: 0;
-    text-indent: 5px;
+    /* text-indent: 5px; */
   }
 
   100% {
@@ -202,4 +202,12 @@
     width: 0;
     text-indent: 0;
   }
+}
+
+.mydivclass {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.p-cent {
+  padding: 0em 0.5em;
 }

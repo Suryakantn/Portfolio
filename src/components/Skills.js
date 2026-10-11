@@ -2,41 +2,35 @@ import React from 'react'
 
 const Skills = (props) => {
     let textColor = props.mode === 'light' ? 'black' : 'white';
+    const skillGroups = [
+        { name: 'Languages', skills: ['JavaScript', 'TypeScript', 'Core Java'] },
+        { name: 'Frameworks', skills: ['React.js', 'React Native', 'AngularJS', 'Angular 6', 'Angular Material', 'Next.js', 'Spring Boot', 'Express.js', 'Hibernate', 'JavaServer Pages (JSP)', 'Embedded JavaScript (EJS)'] },
+        { name: 'Frontend', skills: ['HTML', 'HTML5', 'Cascading Style Sheets (CSS)', 'Bootstrap', 'Bootstrap (Framework)', 'Material UI', 'Material-UI', 'jQuery'] },
+        { name: 'Backend & APIs', skills: ['Node.js', 'RESTful APIs'] },
+        { name: 'Databases & Data', skills: ['MySQL', 'MongoDB', 'Redis', 'Snowflake'] },
+        { name: 'Cloud', skills: ['AWS', 'Amazon Web Services (AWS)'] },
+        { name: 'Tools', skills: ['VS Code', 'Git', 'GitLab', 'Bitbucket', 'Jira', 'Confluence', 'Postman', 'Figma', 'Zeplin', 'Splunk', 'SonarQube', 'Kibana'] },
+        { name: 'Engineering', skills: ['Version Control', 'Code Review', 'Code Design', 'Continuous Integration (CI)', 'Data Structures & Algorithms', 'Design Patterns', 'Testing', 'Debugging', 'Problem Solving', 'Agile Methodologies'] },
+    ];
 
     return (
         <>
-            <h1 className={`header-name my-4 header-anim text-${textColor}`}>Skills I have</h1>
-            <div className="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 my-4">
-                <div className="col my-4 ">
-                    <i className="fa-brands fa-angular fa-beat fa-6x" style={{ color: "#c52020" }}></i>
-                </div>
-                <div className="col my-4 ">
-                    <i className="fa-brands fa-node fa-beat fa-6x" style={{ color: "#3C873A" }}></i>
-                </div>
-                <div className="col my-4 ">
-                    <i className="fa-brands fa-react fa-beat fa-6x" style={{ color: "#61DBFB" }}></i>
-                </div>
-                <div className="col my-4 ">
-                    <i className="fa-brands fa-html5 fa-beat fa-6x" style={{ color: "#e34c26" }}></i>
-                </div>
-                <div className="col my-4 ">
-                    <i className="fa-brands fa-js fa-beat fa-6x" style={{ color: "#F0DB4F" }}></i>
-                </div>
-                <div className="col my-3 " >
-                    <img width="110" height="110" className="fa-brands fa-beat fa-6x" src="https://img.icons8.com/color/110/typescript.png" alt="typescript" />
-                </div>
-                <div className="col my-4 ">
-                    <i className="fa-brands fa-aws fa-beat fa-6x" style={{ color: "#FF9900" }}></i>
-                </div>
-                <div className="col my-4 ">
-                    <i className="fa-brands fa-css3-alt fa-beat fa-6x" style={{ color: "#264de4" }}></i>
-                </div>
-                <div className="col my-4 ">
-                    <i className="fa-brands fa-git fa-beat fa-6x" style={{ color: "#F1502F" }}></i>
-                </div>
-                <div className="col">
-                    <img width="110" height="110" className="fa-brands fa-beat fa-6x" src="https://img.icons8.com/color/110/mysql-logo.png" alt="mysql-logo" />
-                </div>
+            <h1 className={`header-name my-4 text-${textColor}`}>Skills</h1>
+            <div className="row g-3 my-4">
+                {skillGroups.map((group) => (
+                    <div className="col-12 col-md-6 col-lg-4" key={group.name}>
+                        <div className={`card h-100 bg-${props.mode} text-${textColor}`}>
+                            <div className="card-body">
+                                <h2 className="h5 card-title">{group.name}</h2>
+                                <div className="d-flex flex-wrap gap-2">
+                                    {group.skills.map((skill) => (
+                                        <span className="badge bg-secondary" key={skill}>{skill}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </>
     )

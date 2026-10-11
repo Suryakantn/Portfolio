@@ -12,30 +12,30 @@ function Home(props) {
             <div id="about">
                 <About mode={props.mode}></About>
             </div>
-            <hr class="dashed-line container"/>     
+            <hr className="dashed-line container"/>     
             <div className="container" id="education">
                 <h2 className={`header-name text-${props.mode === 'light' ? 'black' : 'white'}`}> Education </h2>
                 <Education mode={props.mode}></Education>
             </div>
-            <hr class="dashed-line container"/>     
+            <hr className="dashed-line container"/>     
             <div className="container" id="experience" >
                 <h2 className={`header-name text-${props.mode === 'light' ? 'black' : 'white'}`}>My Experiences</h2>
-                {props.experiences.map((exp) => {
+                {props.experiences.map((company) => {
                     return (
-                        <Profession key={exp.order} mode={props.mode} exp={exp}></Profession>
+                        <Profession key={company.companyId} mode={props.mode} exp={company}></Profession>
                     )
                 })}
             </div>
-            <hr class="dashed-line container"/>     
+            <hr className="dashed-line container"/>     
             <div className="container" id="skills" >
                 <Skills mode={props.mode}></Skills>
             </div>
-            <hr class="dashed-line container"/>     
+            <hr className="dashed-line container"/>     
             <div className="container" id="project" >
                 <Projects mode={props.mode}></Projects>
             </div>
-            <hr class="dashed-line container"/>     
-            <div id="extra" class="my-3" >
+            <hr className="dashed-line container"/>     
+            <div id="extra" className="my-3" >
                 <Extra mode={props.mode}></Extra>
             </div>
         </>

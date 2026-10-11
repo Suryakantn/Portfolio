@@ -1,48 +1,163 @@
 [
     {
-        "order": "1",
-        "title": "Software Engineer - II",
+        "companyId": "finicity",
         "company": "Finicity, a Mastercard Company",
-        "location": "Navi Mumbai, Maharshtra",
-        "expStart": "06/2021",
-        "expEnd": "present",
-        "description": [
-            "Develop scripts to synchronize and scrape user data & transactions from Financial Institutions",
-            "Supporting company’s owned budgeting application.",
-            "Develop, test and implement new software programs"
+        "companyPeriod": "Jun 2021 – Present",
+        "roles": [
+            {
+                "title": "Senior Software Engineer",
+                "period": "Mar 2026 – Present",
+                "location": "Maharashtra, India · Hybrid",
+                "skills": [
+                    "JavaScript",
+                    "TypeScript",
+                    "React.js",
+                    "Next.js",
+                    "Spring Boot",
+                    "Node.js",
+                    "Express.js",
+                    "RESTful APIs",
+                    "AWS",
+                    "MySQL",
+                    "Snowflake",
+                    "Continuous Integration (CI)",
+                    "Git",
+                    "GitLab",
+                    "Code Review",
+                    "Code Design",
+                    "Testing"
+                ]
+            },
+            {
+                "title": "Software Engineer II",
+                "period": "Jan 2022 – Mar 2026",
+                "location": "Navi Mumbai, Maharashtra, India",
+                "skills": [
+                    "Version Control",
+                    "Code Review",
+                    "Code Design",
+                    "JavaScript",
+                    "Core Java",
+                    "TypeScript",
+                    "Node.js",
+                    "Snowflake",
+                    "Express.js",
+                    "React.js",
+                    "HTML5",
+                    "Cascading Style Sheets (CSS)",
+                    "MySQL",
+                    "Splunk",
+                    "Continuous Integration (CI)",
+                    "SonarQube",
+                    "Git",
+                    "GitLab"
+                ]
+            },
+            {
+                "title": "Software Engineer",
+                "period": "Jun 2021 – Jan 2022",
+                "location": "Navi Mumbai, Maharashtra, India",
+                "skills": [
+                    "Version Control",
+                    "JavaScript",
+                    "TypeScript",
+                    "Node.js",
+                    "React.js",
+                    "Express.js",
+                    "HTML5",
+                    "Cascading Style Sheets (CSS)",
+                    "Git",
+                    "GitLab",
+                    "MySQL",
+                    "Splunk",
+                    "Snowflake",
+                    "SonarQube",
+                    "Core Java"
+                ]
+            }
         ],
-        "company_url":"https://www.linkedin.com/company/finicity/mycompany/",
+        "description": [
+            "Developed scripts to synchronize and retrieve user data and transactions from financial institutions.",
+            "Worked on script updates and application development using JavaScript, TypeScript, and Node.js.",
+            "Created an Express.js automation tool integrated with GitLab, Snowflake, and Jira.",
+            "Developed an internal frontend tool for updating and aggregating data and presenting financial institution details.",
+            "Used Confluence, Jira, Agile practices, and Git for collaboration and version control.",
+            "Implemented a CI/CD pipeline and maintained scripts to automate recurring tasks."
+        ],
+        "company_url": "https://www.linkedin.com/company/finicity/mycompany/",
         "isActive": true
     },
     {
-        "order": "2",
-        "title": "Software Engineer",
+        "companyId": "vernost",
         "company": "Vernost Marketing Technology Solutions Ltd.",
-        "location": "Mumbai, Maharshtra",
-        "expStart": "06/2018",
-        "expEnd": "05/2021",
-        "description": [
-            "Helped to Launch Intermiles/Jet Privilege loyalty platform.Integration with Razorpay,Citrus Pay,Cleartrip and EaseMyTrip.",
-            "Implemented web service and utilized it in to UI, UX, Back Office and Schedulers",
-            "Collaborated on all stages of systems development lifecycle, from requirement gathering to production releases.",
-            "Contributed ideas and suggestions in team meetings and delivered updates on deadlines, designs and enhancements.",
-            "Coordinated with project management staff on database development timelines and project scope."
+        "companyPeriod": "Jun 2018 – May 2021",
+        "roles": [
+            {
+                "title": "Software Engineer",
+                "period": "Jun 2018 – May 2021",
+                "location": "Mumbai Metropolitan Region · On-site",
+                "skills": [
+                    "Version Control",
+                    "Code Design",
+                    "JavaScript",
+                    "TypeScript",
+                    "Node.js",
+                    "Express.js",
+                    "AngularJS",
+                    "Angular 6",
+                    "Angular Material",
+                    "React.js",
+                    "React Native",
+                    "HTML5",
+                    "Cascading Style Sheets (CSS)",
+                    "Amazon Web Services (AWS)",
+                    "MySQL",
+                    "MongoDB",
+                    "Bootstrap (Framework)",
+                    "Material-UI",
+                    "Kibana",
+                    "jQuery",
+                    "Embedded JavaScript (EJS)",
+                    "Bitbucket"
+                ]
+            }
         ],
-        "company_url":"https://www.linkedin.com/company/vernostmarketingtechnologysolutions/",
+        "description": [
+            "Helped launch the InterMiles/Jet Privilege loyalty platform, integrating Razorpay, Citrus Pay, Cleartrip, and EaseMyTrip.",
+            "Implemented web services used by the UI, back office, and scheduled jobs.",
+            "Contributed across the software development lifecycle, from requirements gathering through production releases.",
+            "Shared ideas in team meetings and delivered updates on timelines, designs, and enhancements.",
+            "Coordinated database development timelines and project scope with project management.",
+            "Created development and staging environments, wrote scripts to monitor logs for potential issues, and worked with AWS services including EC2, S3, and Route 53."
+        ],
+        "company_url": "https://www.linkedin.com/company/vernostmarketingtechnologysolutions/",
         "isActive": true
     },
     {
-        "order": "3",
-        "title": "Trainee Software Engineer",
+        "companyId": "naaptol",
         "company": "Naaptol Online Shopping Pvt. Ltd",
-        "location": "Navi Mumbai, Maharshtra",
-        "expStart": "02/2018",
-        "expEnd": "05/2018",
-        "description": [
-            "Learned from Designing to Developing projects with Frontend and Backend technologies.",
-            "Implemented small modules to enhance platform"
+        "companyPeriod": "Feb 2018 – May 2018",
+        "roles": [
+            {
+                "title": "Trainee Software Engineer",
+                "period": "Feb 2018 – May 2018",
+                "location": "Navi Mumbai · On-site",
+                "skills": [
+                    "Core Java",
+                    "Hibernate",
+                    "JavaServer Pages (JSP)",
+                    "JavaScript",
+                    "jQuery",
+                    "HTML",
+                    "Cascading Style Sheets (CSS)"
+                ]
+            }
         ],
-        "company_url":"https://www.linkedin.com/company/naaptol-online-shopping-pvt--ltd/",
+        "description": [
+            "Learned and contributed across frontend and backend project development.",
+            "Implemented small modules to enhance the platform."
+        ],
+        "company_url": "https://www.linkedin.com/company/naaptol-online-shopping-pvt--ltd/",
         "isActive": true
     }
 ]

@@ -4,11 +4,35 @@ import { Link } from 'react-scroll'
 function Navbar(props) {
     let textColor = props.mode === 'light' ? 'black' : 'white';
     let socialBtn = props.mode === 'light' ? 'secondary' : 'light';
+    // Function will execute on click of button
+    const onButtonClick = async () => {
+        try {
+            const pdfUrl = require('../assets/Suryakant_Nirmal_Resume.pdf');
+            const response = await fetch(pdfUrl);
+
+            if (!response.ok) {
+                throw new Error(`Failed to fetch resume: ${response.status}`);
+            }
+
+            const blob = await response.blob();
+            const fileURL = window.URL.createObjectURL(blob);
+            const alink = document.createElement('a');
+            alink.href = fileURL;
+            alink.download = 'Suryakant_Nirmal_Resume.pdf';
+            document.body.appendChild(alink);
+            alink.click();
+            alink.remove();
+            window.URL.revokeObjectURL(fileURL);
+        } catch (error) {
+            console.error('Resume download failed:', error);
+            window.alert('Unable to download the resume right now. Please try again later.');
+        }
+    };
     return (
         <>
             <nav className={`navbar fixed-top navbar-expand-lg bg-${props.mode}`}>
                 <div className="container-fluid">
-                    <img className="inner-img mx-2" width="30" height="30" src="myavatar.png" alt="Personal Portfolio Images" />
+                    <img className="inner-img mx-2" width="30" height="30" src={require(`../assets/images/myavatar.png`)} alt="Personal Portfolio Images" />
                     <Link className={`navbar-brand text-${textColor} nav-text-link`} to="about" spy={true} smooth={true} offset={-60} >Suryakant</Link>
                     <button className={`navbar-toggler bg-${socialBtn} `} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -25,12 +49,28 @@ function Navbar(props) {
                                 <Link className={`nav-link text-${textColor} `} to="experience" spy={true} smooth={true} offset={-60} duration={500}>Experience</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className={`nav-link text-${textColor} `} to="skills" spy={true} smooth={true} offset={-60} duration={500}>skills</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className={`nav-link text-${textColor} `} to="project" spy={true} smooth={true} offset={-60} duration={500}>Projects</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className={`nav-link text-${textColor} `} to="extra" spy={true} smooth={true} offset={-60} duration={500}>Extra</Link>
                             </li>
-                            
+                            <li className="nav-item">
+                                <button className={`nav-link text-${textColor} `}  onClick={onButtonClick}>Resume <i className="fa-solid fa-download"></i></button>
+                            </li>
+
                         </ul>
                         <div className="form-check form-switch">
-                            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onClick={props.toggleMode} />
+                            <input
+                                className="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="flexSwitchCheckChecked"
+                                checked={props.mode === 'light'}
+                                onChange={props.toggleMode}
+                            />
                             <label className={`form-check-label text-${textColor}`} htmlFor="flexSwitchCheckChecked">{props.mode === 'light' ? 'Dark' : 'Light'} Mode</label>
                         </div>
                     </div>

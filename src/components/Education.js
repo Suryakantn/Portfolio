@@ -2,15 +2,21 @@ import React from 'react'
 
 export const Education = (props) => {
     let textColor = props.mode === 'light' ? 'black' : 'white';
-    let socialBtn = props.mode === 'light' ? 'secondary' : 'light';
     return (
         <>
-            <div className={`card container text-${textColor} bg-${props.mode}`} style={{ width: '18rem' }}>
+            <div className={`card container text-${textColor} bg-${props.mode}`}>
                 <div className="card-body">
-                    <h5 className="card-title">Bachelor of Engineering (E&Tc)</h5>
-                    <h6 className={`card-subtitle mb-2 text-body-${socialBtn}`}>Sanjivani College of Engineering kopargaon</h6>
-                    {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                    {/* <a href="https://www.linkedin.com/school/sanjivani-college-of-engineering-kopargaon/" className="card-link">Card link</a> */}
+                    <h3 className="card-title h5">Bachelor of Engineering (B.E.), E&Tc</h3>
+                    <h4 className="card-subtitle mb-2 h6 text-body-secondary">Sanjivani College of Engineering, Kopargaon</h4>
+                    <p className="card-text">2013–2017</p>
+                    <hr />
+                    <h3 className="h5">Licenses &amp; Certifications</h3>
+                    <ul className="mb-3">
+                        <li>Diploma in Java Technologies — Profound Edutech</li>
+                        <li>Python Fundamental Course — Sololearn</li>
+                    </ul>
+                    <h3 className="h5">Honors &amp; Awards</h3>
+                    <p className="card-text mb-0">Best Roorki Award — Robocon 2017</p>
                 </div>
             </div>
         </>
