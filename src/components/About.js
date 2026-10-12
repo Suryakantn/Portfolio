@@ -1,4 +1,7 @@
 import React from 'react'
+import profilePhoto from '../assets/images/pofile_photo.jpg';
+import lightProfilePhoto from '../assets/images/pofile_photo2.jpg';
+
 function About(props) {
     let textColor = props.mode === 'light' ? 'black' : 'white';
     return (
@@ -28,7 +31,7 @@ function About(props) {
                     {/* <div className="order-1 order-lg-2 col-lg-5">
                         <div className="thumbnail">
                             <div className="inner">
-                                <img className="inner-img" src={require(`../assets/images/${props.mode !== 'light' ? 'pofile_photo.jpg' : 'pofile_photo2.jpg'}`)} alt="Personal Portfolio Images" />
+                                <img className="inner-img" src={props.mode !== 'light' ? profilePhoto : lightProfilePhoto} alt="Personal Portfolio Images" />
                             </div>
                         </div>
                     </div> */}
