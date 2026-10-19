@@ -1,31 +1,34 @@
-import React from 'react'
+import React from 'react';
 import projectsData from '../projects.json';
-const Projects = (props) => {
-    let textColor = props.mode === 'light' ? 'black' : 'white';
-    return (
-        <>
-            <div>
-                <h1 className={`header-name my-4 text-${textColor}`}>My Projects</h1>
-                <div className="row">
-                    {projectsData.map((pro) => {
-                        return (
-                            <div key={pro.name} className="col-sm-6 my-3">
-                                <div className={`card bg-${props.mode} text-${textColor}`}>
-                                    <div className="card-body">
-                                        <h2 className="card-title">{pro.name}</h2>
-                                        <p className="card-text">{pro.description}</p>
-                                        {pro.url && <a href={pro.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Preview</a>}
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
 
-                <h4 className={`my-4 header-anim text-${textColor}`}>More Projects will be added soon!!!</h4>
+function Projects() {
+  return (
+    <div className="project-grid">
+      {projectsData.map((project, index) => (
+        <article className="project-card reveal" key={project.name}>
+          <div className={`project-art project-art-${index + 1}`} aria-hidden="true">
+            <span className="project-number">0{index + 1}</span>
+            <span className="project-art-mark">{project.name.slice(0, 1)}</span>
+            <span className="project-art-caption">PERSONAL PROJECT</span>
+          </div>
+          <div className="project-content">
+            <div className="project-title-row">
+              <h3>{project.name}</h3>
+              {project.url ? (
+                <a className="project-link" href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.name}`}>
+                  ↗
+                </a>
+              ) : (
+                <span className="project-status">In progress</span>
+              )}
             </div>
-        </>
-    )
+            <p>{project.description}</p>
+            {project.url && <a className="project-visit" href={project.url} target="_blank" rel="noopener noreferrer">Visit project <span aria-hidden="true">↗</span></a>}
+          </div>
+        </article>
+      ))}
+    </div>
+  );
 }
 
-export default Projects
+export default Projects;

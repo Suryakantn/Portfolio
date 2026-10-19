@@ -1,84 +1,82 @@
-import React from 'react'
-import { Link } from 'react-scroll'
-import avatarUrl from '../assets/images/myavatar.png';
+import React, { useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import resumeUrl from '../assets/Suryakant_Nirmal_Resume.pdf';
 
-function Navbar(props) {
-    let textColor = props.mode === 'light' ? 'black' : 'white';
-    let socialBtn = props.mode === 'light' ? 'secondary' : 'light';
-    // Function will execute on click of button
-    const onButtonClick = async () => {
-        try {
-            const response = await fetch(resumeUrl);
+const navigation = [
+  { label: 'About', target: 'about' },
+  { label: 'Experience', target: 'experience' },
+  { label: 'Skills', target: 'skills' },
+  { label: 'Projects', target: 'project' },
+];
 
-            if (!response.ok) {
-                throw new Error(`Failed to fetch resume: ${response.status}`);
-            }
+function Navbar({ mode, toggleMode }) {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-            const blob = await response.blob();
-            const fileURL = window.URL.createObjectURL(blob);
-            const alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = 'Suryakant_Nirmal_Resume.pdf';
-            document.body.appendChild(alink);
-            alink.click();
-            alink.remove();
-            window.URL.revokeObjectURL(fileURL);
-        } catch (error) {
-            console.error('Resume download failed:', error);
-            window.alert('Unable to download the resume right now. Please try again later.');
-        }
-    };
-    return (
-        <>
-            <nav className={`navbar fixed-top navbar-expand-lg bg-${props.mode}`}>
-                <div className="container-fluid">
-                    <img className="inner-img mx-2" width="30" height="30" src={avatarUrl} alt="Personal Portfolio Images" />
-                    <Link className={`navbar-brand text-${textColor} nav-text-link`} to="about" spy={true} smooth={true} offset={-60} >Suryakant</Link>
-                    <button className={`navbar-toggler bg-${socialBtn} `} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-text-link">
-                            <li className="nav-item">
-                                <Link className={`nav-link text-${textColor} `} aria-current="page" to="about" spy={true} offset={-60} smooth={true} duration={500}>About</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className={`nav-link text-${textColor} `} to="education" spy={true} smooth={true} offset={-50} duration={500}>Education</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className={`nav-link text-${textColor} `} to="experience" spy={true} smooth={true} offset={-60} duration={500}>Experience</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className={`nav-link text-${textColor} `} to="skills" spy={true} smooth={true} offset={-60} duration={500}>skills</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className={`nav-link text-${textColor} `} to="project" spy={true} smooth={true} offset={-60} duration={500}>Projects</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className={`nav-link text-${textColor} `} to="extra" spy={true} smooth={true} offset={-60} duration={500}>Extra</Link>
-                            </li>
-                            <li className="nav-item">
-                                <button className={`nav-link text-${textColor} `}  onClick={onButtonClick}>Resume <i className="fa-solid fa-download"></i></button>
-                            </li>
+  const closeMenu = () => setMenuOpen(false);
 
-                        </ul>
-                        <div className="form-check form-switch">
-                            <input
-                                className="form-check-input"
-                                type="checkbox"
-                                role="switch"
-                                id="flexSwitchCheckChecked"
-                                checked={props.mode === 'light'}
-                                onChange={props.toggleMode}
-                            />
-                            <label className={`form-check-label text-${textColor}`} htmlFor="flexSwitchCheckChecked">{props.mode === 'light' ? 'Dark' : 'Light'} Mode</label>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </>
-    )
+  return (
+    <header className="site-header">
+      <nav className="nav-shell" aria-label="Main navigation">
+        <ScrollLink
+          className="brand"
+          to="about"
+          smooth
+          duration={500}
+          offset={-88}
+          onClick={closeMenu}
+          aria-label="Suryakant Nirmal, back to top"
+        >
+          <span className="brand-monogram" aria-hidden="true">SN</span>
+          <span>Suryakant<span className="brand-dot">.</span></span>
+        </ScrollLink>
+
+        <button
+          className={`menu-toggle ${menuOpen ? 'is-open' : ''}`}
+          type="button"
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+        </button>
+
+        <div className={`nav-content ${menuOpen ? 'menu-open' : ''}`}>
+          <div className="nav-links">
+            {navigation.map(({ label, target }) => (
+              <ScrollLink
+                key={target}
+                className="nav-link"
+                activeClass="nav-active"
+                to={target}
+                spy
+                smooth
+                duration={500}
+                offset={-88}
+                onClick={closeMenu}
+              >
+                {label}
+              </ScrollLink>
+            ))}
+          </div>
+          <div className="nav-actions">
+            <button
+              className="theme-toggle"
+              type="button"
+              onClick={toggleMode}
+              aria-label={`Switch to ${mode === 'dark' ? 'light' : 'dark'} theme`}
+              title={`Switch to ${mode === 'dark' ? 'light' : 'dark'} theme`}
+            >
+              <span aria-hidden="true">{mode === 'dark' ? '☼' : '☾'}</span>
+            </button>
+            <a className="button button-small button-outline" href={resumeUrl} download="Suryakant_Nirmal_Resume.pdf">
+              Resume <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
 }
 
-export default Navbar
+export default Navbar;
