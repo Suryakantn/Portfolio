@@ -6,7 +6,10 @@ test('renders the LinkedIn profile details', () => {
   render(<App />);
   expect(screen.getByRole('heading', { name: /Hi, I’m Suryakant Nirmal/ })).toBeInTheDocument();
   expect(screen.getByText('Building Scalable FinTech Platforms.')).toBeInTheDocument();
-  expect(screen.getByText(/7\+ years of experience/)).toBeInTheDocument();
+  expect(screen.getByText(/8\+ years in software development/)).toBeInTheDocument();
+  expect(screen.getByText(/API integrations/)).toBeInTheDocument();
+  expect(screen.getByLabelText(/Eight years of software engineering experience/)).toBeInTheDocument();
+  expect(screen.queryByRole('img', { name: /portrait of suryakant/i })).not.toBeInTheDocument();
   expect(screen.getByText('Senior Software Engineer')).toBeInTheDocument();
   expect(screen.getByText('Software Engineer II')).toBeInTheDocument();
   expect(screen.getAllByRole('heading', { name: 'Finicity, a Mastercard Company' })).toHaveLength(1);
